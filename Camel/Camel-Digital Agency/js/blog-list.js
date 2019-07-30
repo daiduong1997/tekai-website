@@ -1,12 +1,10 @@
-var readMoreBlog = document.getElementById("read-more-blog");
+
+var readMoreBlog = document.getElementById("read-more-blog-lorem");
 readMoreBlog.style.display = "none"
 
-
-function readMore(){
-
-    var blogLorem = document.getElementById("blog-Lorem");
-    var readMoreBlog = document.getElementById("read-more-blog");
-
+function readMore(att){
+    var blogLorem = document.getElementById("blog-"+att);
+    var readMoreBlog = document.getElementById("read-more-blog-"+ att);
     if (blogLorem.style.display === "none") {
         blogLorem.style.display = "inline";
         readMoreBlog.style.display = "none";
@@ -19,8 +17,8 @@ function readMore(){
 
 $(document).ready(function(){
 
-    $('#search-blog').click(function(){
-        readMore()
+    $('#read-more-lorem').click(function(){
+        readMore('lorem')
     }) 
 
     $('#search-blog').on("keyup", function () {
